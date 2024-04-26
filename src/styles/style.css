@@ -1,73 +1,445 @@
-*{
-	padding: 0;
-	margin: 0;
-	border: 0;
+:root {
+  --bg1: #292f36;
+  --bg2: #1a1e23;
+  --brand1: #12f7d6;
+  --brand2: #98faec;
+  --grey: #43454d;
+  --white: #ffffff;
 }
 
-*,*::before,*::after{
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
-:focus,:active{outline: none;}
-
-a:focus,a:active{outline: none;}
-
-nav,footer,header,aside{display: block;}
-
-html,body{
-	height: 100%;
-	width: 100%;
-	font-size: 100%;
-	line-height: 1;
-	font-size: 14px;
-	-ms-text-size-adjust: 100%;
-	-moz-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
+*,
+*::before,
+*::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-input,button,textarea{font-family:inherit;}
-input::-ms-clear{display: none;}
-button{cursor: pointer;}
-button::-moz-focus-inner {padding:0;border:0;}
-a, a:visited{text-decoration: none;}
-a:hover{text-decoration: none;}
-ul li{list-style: none;}
-img{vertical-align: top;}
-h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
-
-@font-face {
-    font-family: 'Ubuntu';
-    font-weight: 300;
-    src: url(../fonts/ubuntu/Ubuntu-Light.ttf);
+:focus,
+:active {
+  outline: none;
 }
 
-@font-face {
-    font-family: 'Ubuntu';
-    font-weight: 400;
-    src: url(../fonts/ubuntu/Ubuntu-Regular.ttf);
+a:focus,
+a:active {
+  outline: none;
 }
 
-@font-face {
-    font-family: 'Ubuntu';
-    font-weight: 500;
-    src: url(../fonts/ubuntu/Ubuntu-Medium.ttf);
-}
+/* nav,footer,header,aside{display: block;} */
 
-@font-face {
-    font-family: 'IBMPlexMono';
-    font-weight: 400;
-    src: url(../fonts/IBM_Plex_Mono/IBMPlexMono-Regular.ttf);
-}
-
-@font-face {
-    font-family: 'IBMPlexMono';
-    font-weight: 500;
-    src: url(../fonts/IBM_Plex_Mono/IBMPlexMono-Medium.ttf);
-}
-
+html,
 body {
-    font-family: 'IBMPlexMono';
-    font-weight: 500;
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 16px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  src: url(../fonts/ubuntu/Ubuntu-Light.ttf);
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  src: url(../fonts/ubuntu/Ubuntu-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-weight: 500;
+  src: url(../fonts/ubuntu/Ubuntu-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'IBMPlexMono';
+  font-weight: 400;
+  src: url(../fonts/IBM_Plex_Mono/IBMPlexMono-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'IBMPlexMono';
+  font-weight: 500;
+  src: url(../fonts/IBM_Plex_Mono/IBMPlexMono-Medium.ttf);
+}
+
+/* ================== HEADER ===================== */
+body {
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  padding-top: 70px;
+}
+
+.wrapper {
+  background-color: var(--bg1);
+  color: var(--white);
+}
+
+.wrapper.light {
+  background-color: var(--white);
+  color: black;
+}
+
+.header-section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.header_container {
+  max-width: 1920px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  translate: 0 -70px;
+  width: 100%;
+  height: 72px;
+  border-bottom: 1px solid grey;
+  padding: 0 120px;
+  background: var(--bg1);
+  transition: 0.3s;
+}
+
+.navbar_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1760px;
+  gap: 50px;
+  background: var(--bg1);
+}
+
+.navbar.visible {
+  top: 0;
+  translate: 0;
+}
+
+.logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.logo-link > img {
+  width: 60px;
+  height: 60px;
+}
+
+.logo-item .name {
+  font-size: 22px;
+  color: var(--white);
+}
+
+.nav-items {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+  gap: 20px;
+}
+
+.nav-items a {
+  font-size: 20px;
+  color: var(--white);
+}
+
+.nav-items a:first-child {
+  color: var(--brand1);
+}
+
+.nav-items a:hover {
+  color: var(--brand1);
+  transition: 0.4s;
+}
+
+.change-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  gap: 8px;
+}
+
+.change-title {
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 500;
+}
+
+/* ====== CHECKBOX ======= */
+
+.checkbox-wrapper-6 .tgl {
+  display: none;
+}
+/* .checkbox-wrapper-6 .tgl,
+.checkbox-wrapper-6 .tgl:after,
+.checkbox-wrapper-6 .tgl:before,
+.checkbox-wrapper-6 .tgl *,
+.checkbox-wrapper-6 .tgl *:after,
+.checkbox-wrapper-6 .tgl *:before,
+.checkbox-wrapper-6 .tgl + .tgl-btn {
+  box-sizing: border-box;
+} */
+
+/* .checkbox-wrapper-6 .tgl::-moz-selection,
+.checkbox-wrapper-6 .tgl:after::-moz-selection,
+.checkbox-wrapper-6 .tgl:before::-moz-selection,
+.checkbox-wrapper-6 .tgl *::-moz-selection,
+.checkbox-wrapper-6 .tgl *:after::-moz-selection,
+.checkbox-wrapper-6 .tgl *:before::-moz-selection,
+.checkbox-wrapper-6 .tgl + .tgl-btn::-moz-selection,
+.checkbox-wrapper-6 .tgl::selection,
+.checkbox-wrapper-6 .tgl:after::selection,
+.checkbox-wrapper-6 .tgl:before::selection,
+.checkbox-wrapper-6 .tgl *::selection,
+.checkbox-wrapper-6 .tgl *:after::selection,
+.checkbox-wrapper-6 .tgl *:before::selection,
+.checkbox-wrapper-6 .tgl + .tgl-btn::selection {
+  background: none;
+} */
+
+.checkbox-wrapper-6 .tgl + .tgl-btn {
+  outline: 0;
+  display: block;
+  width: 50px;
+  height: 25px;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox-wrapper-6 .tgl + .tgl-btn:after,
+.checkbox-wrapper-6 .tgl + .tgl-btn:before {
+  position: relative;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+}
+
+.checkbox-wrapper-6 .tgl + .tgl-btn:after {
+  left: 0;
+}
+.checkbox-wrapper-6 .tgl + .tgl-btn:before {
+  display: none;
+}
+.checkbox-wrapper-6 .tgl:checked + .tgl-btn:after {
+  left: 50%;
+}
+
+.checkbox-wrapper-6 .tgl-light + .tgl-btn {
+  background: #544d4d;
+  border-radius: 2em;
+  padding: 2px;
+  transition: all 0.4s ease;
+}
+.checkbox-wrapper-6 .tgl-light + .tgl-btn:after {
+  border-radius: 50%;
+  background: #fff;
+  transition: all 0.2s ease;
+}
+.checkbox-wrapper-6 .tgl-light:checked + .tgl-btn {
+  background: var(--brand1);
+}
+.checkbox-wrapper-6 .tgl-light:checked + .tgl-btn:after {
+  background: var(--bg1);
+}
+
+/* ======================= */
+
+.header_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1600px;
+
+  padding: 60px 100px 120px 100px;
+}
+
+.header_container .title {
+  font-size: 108px;
+  margin-bottom: 60px;
+  color: var(--brand1);
+}
+
+.header_info_container {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.person_card_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 320px;
+  height: 520px;
+  padding: 35px 20px;
+
+  border: 4px solid #fff;
+  border-top-left-radius: 160px;
+  border-bottom-right-radius: 160px;
+  box-shadow: -5px -5px 0px -1px var(--brand1);
+  -webkit-box-shadow: -5px -5px 0px -1px var(--brand1);
+  -moz-box-shadow: -5px -5px 0px -1px var(--brand1);
+
+  font-family: 'IBMPlexMono';
+  font-weight: 400;
+}
+
+.card_container-foto {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  background-image: url(../fotos/person_foto.jpg);
+  background-size: 100% 100%;
+  border: 3px solid var(--brand1);
+  border-radius: 50%;
+}
+
+.card_name {
+  font-size: 29px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.card_jobtitle {
+  font-size: 18px;
+  margin-bottom: 28px;
+}
+
+.card_item {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card_tools {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.card_tools span {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  padding: 4px;
+  text-transform: uppercase;
+  border-radius: 20px;
+  background-color: var(--brand1);
+  color: black;
+}
+
+.person_info_container .undertitle {
+  position: relative;
+  margin: 10px 0 30px 20px;
+}
+
+.person_info_container .description {
+  margin: 18px 0 18px 20px;
+}
+
+.undertitle {
+  font-size: 64px;
+}
+
+.undertitle span {
+  color: var(--brand1);
+}
+
+.description {
+  font-family: 'IBMPlexMono';
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.person_tools_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 215px;
+  height: 380px;
+  border-radius: 67px;
+  background-color: var(--bg2);
+  flex-shrink: 0;
+}
+
+.person-tools-item {
+  display: flex;
+  align-items: center;
+  width: 75%;
+  gap: 10px;
+}
+
+.tools-item-number {
+  font-size: 58px;
+  color: var(--brand1);
+}
+
+.tools-item-description {
+  font-family: 'IBMPlexMono';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--white);
 }

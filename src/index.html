@@ -1,12 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
     <title>My portfolio</title>
-</head>
-<body>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ab unde pariatur explicabo, consequatur quisquam inventore, nulla eaque obcaecati sapiente tempora voluptatum excepturi laudantium suscipit. Unde cumque expedita esse laboriosam.</p>
-</body>
+  </head>
+  <body>
+    <div class="wrapper" id="wrapper">
+      <header class="header-section">
+        <nav class="navbar visible" id="navbar">
+          <div class="navbar_container">
+            <div class="logo-item">
+              <a class="logo-link" href="#">
+                <img
+                  src="./icons/name_logo.svg"
+                  class="header-logo"
+                  alt="логотип"
+                />
+              </a>
+              <span class="name">Lisin Dmitri</span>
+            </div>
+            <div class="nav-items">
+              <a href="#">Home</a>
+              <a href="#">About</a>
+              <a href="#">Skills</a>
+              <a href="#">Portfolio</a>
+              <a href="#">Contact</a>
+            </div>
+            <div class="change-container">
+                <span class="change-title">Light mode</span>
+                <div class="checkbox-wrapper-6">
+                    <input class="tgl tgl-light" id="checkbox" type="checkbox"/>
+                    <label class="tgl-btn" for="checkbox">
+                </div>
+            </div>
+
+          </div>
+        </nav>
+
+        <div class="header_container">
+          <h1 class="title">Developer</h1>
+          <div class="header_info_container">
+            <div class="person_card_container">
+              <div class="card_container-foto"></div>
+              <p class="card_name">Dmitri</p>
+              <p class="card_jobtitle">Web developer</p>
+              <div class="person_card-info">
+                <div class="card_item">
+                    <img src="./icons/card_info/icon_email.svg" class="card_item-icon" alt="">
+                    <span class="card_item-description">dmitrilissin@gmail.com</span>
+                </div>
+                <div class="card_item">
+                    <img src="./icons/card_info/icon_country.svg" class="card_item-icon" alt="">
+                    <span class="card_item-description">Russia</span>
+                </div>
+                <div class="card_item">
+                    <img src="./icons/card_info/icon_work.svg" class="card_item-icon" alt="">
+                    <span class="card_item-description">Full-time</span>
+                </div>
+                <div class="card_item">
+                    <img src="./icons/card_info/icon_link.svg" class="card_item-icon" alt="">
+                    <span class="card_item-description">dmitrilissin@gmail.com</span>
+                </div>
+              </div>
+              <div class="card_tools">
+                <span>html</span>
+                <span>css</span>
+                <span>js</span>
+                <span>react</span>
+              </div>
+            </div>
+            <div class="person_info_container">
+                <img src="./icons/_h1_.svg" alt="">
+                <h2 class="undertitle">Hey <br>I`am <span>Dmitri</span>, <br>Web Developer</h2>
+                <img src="./icons/_p_.svg" alt="">
+                <p class="description">I help business grow by crafting amazing web experiences. If you're looking for a develorep that likes to get stuff done,</p>
+                <img src="./icons/p_close.svg" alt="">
+            </div>
+            <div class="person_tools_container">
+                <div class="person-tools-item">
+                    <span class="tools-item-number">4</span>
+                    <p class="tools-item-description">Programming Language</p>
+                </div>
+                <div class="person-tools-item">
+                    <span class="tools-item-number">6</span>
+                    <p class="tools-item-description">Development Tolls</p>
+                </div>
+                <div class="person-tools-item">
+                    <span class="tools-item-number">1</span>
+                    <p class="tools-item-description">Year of Experience</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <script src="./scripts/components/navbar.js"></script>
+  </body>
 </html>
