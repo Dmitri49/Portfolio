@@ -123,7 +123,7 @@ body {
 }
 
 .wrapper.light {
-  background-color: var(--white);
+  background-color: #99a2ab;
   color: black;
 }
 
@@ -131,10 +131,6 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
-}
-
-.header_container {
-  max-width: 1920px;
 }
 
 .navbar {
@@ -147,9 +143,10 @@ body {
   translate: 0 -70px;
   width: 100%;
   height: 72px;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid rgb(175, 175, 175);
   padding: 0 120px;
   background: var(--bg1);
+  z-index: 999;
   transition: 0.3s;
 }
 
@@ -218,6 +215,7 @@ body {
   font-size: 15px;
   line-height: 1;
   font-weight: 500;
+  color: var(--white);
 }
 
 /* ====== CHECKBOX ======= */
@@ -304,12 +302,12 @@ body {
 
 /* ======================= */
 
-.header_container {
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 1600px;
-
+  max-width: 1600px;
+  margin: 0 auto;
   padding: 60px 100px 120px 100px;
 }
 
@@ -389,20 +387,20 @@ body {
   color: black;
 }
 
-.person_info_container .undertitle {
+.person_info_container .subtitle {
   position: relative;
-  margin: 10px 0 30px 20px;
+  margin: 10px 0 10px 20px;
 }
 
 .person_info_container .description {
   margin: 18px 0 18px 20px;
 }
 
-.undertitle {
+.subtitle {
   font-size: 64px;
 }
 
-.undertitle span {
+.subtitle span {
   color: var(--brand1);
 }
 
@@ -410,6 +408,29 @@ body {
   font-family: 'IBMPlexMono';
   font-weight: 400;
   line-height: 1.4;
+}
+
+.email_link_container {
+  display: flex;
+  align-items: center;
+}
+
+.email_link_container > span {
+  display: block;
+  margin: 20px;
+  align-items: center;
+  font-size: 28px;
+  color: var(--brand1);
+}
+
+.email_link_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: var(--grey);
 }
 
 .person_tools_container {
@@ -443,3 +464,74 @@ body {
   line-height: 1.4;
   color: var(--white);
 }
+
+/* =============================== A B O U T ================================== */
+
+.about-section {
+  position: relative;
+  background-color: var(--bg2);
+}
+
+.about-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url(../fotos/backgrounds/bcg_1.png);
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.4;
+}
+
+.about_container > img {
+  margin-bottom: 15px;
+}
+
+.about_container * {
+  position: relative;
+  z-index: 3;
+}
+
+.about_info_container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+  gap: 130px;
+}
+
+.about_subtitle-wrapper {
+  max-width: 360px;
+  margin-bottom: 65px;
+  padding: 15px;
+  background-color: var(--bg1);
+  border: 4px solid var(--brand1);
+  border-top-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.about_subtitle-wrapper > h2 {
+  text-align: center;
+}
+
+.about_description-wrapper {
+  padding: 20px 30px;
+  border-radius: 40px;
+  background-color: var(--bg1);
+}
+
+.about_description-wrapper > * {
+  margin-bottom: 16px;
+}
+
+.about_description-wrapper p:first-of-type {
+    font-size: 18px;
+    color: var(--brand1);
+}
+
+
+
+
+
