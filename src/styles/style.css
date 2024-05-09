@@ -114,6 +114,7 @@ h6 {
 }
 
 /* ================== HEADER ===================== */
+
 body {
   font-family: 'Ubuntu';
   font-weight: 400;
@@ -194,6 +195,7 @@ body {
 .nav-items a {
   font-size: 20px;
   color: var(--white);
+  transition: 0.4s;
 }
 
 .nav-items a:first-child {
@@ -382,6 +384,7 @@ body {
 .subtitle {
   font-size: 64px;
   font-weight: 400;
+  color: var(--white);
 }
 
 .subtitle span {
@@ -392,6 +395,7 @@ body {
   font-family: 'IBMPlexMono';
   font-weight: 400;
   line-height: 1.4;
+  color: var(--white);
 }
 
 .email_link_container {
@@ -447,6 +451,19 @@ body {
   font-size: 16px;
   line-height: 1.4;
   color: var(--white);
+}
+
+/* ====== A N I M A T I O N ======= */
+
+.element-animation {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.element-animation.element-show {
+  opacity: 1;
+  transition: all 1.5s;
+  transform: translateY(0%);
 }
 
 /* =============================== A B O U T ================================== */
@@ -578,6 +595,7 @@ body {
   font-weight: 400;
   font-size: 30px;
   margin-bottom: 10px;
+  color: var(--white);
 }
 
 .technologies_item {
