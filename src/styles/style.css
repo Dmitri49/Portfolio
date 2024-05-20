@@ -743,6 +743,7 @@ body {
 .tabs_title > li {
   width: calc(100% / 5);
   font-size: 24px;
+  color: var(--white);
   text-align: center;
   list-style: none;
   transition: 0.4s;
@@ -879,6 +880,10 @@ body {
   background-color: var(--bg2);
 }
 
+.contact_container {
+  padding-bottom: 20px;
+}
+
 .contact_title {
   width: 220px;
   height: 50px;
@@ -894,7 +899,7 @@ body {
 
 .form_wrapper {
   width: 70%;
-  margin-right: -15px;
+  /* margin-right: -15px; */
 }
 
 .input_container {
@@ -956,4 +961,56 @@ body {
   background-color: var(--grey);
   color: var(--white);
   transition: all 400ms;
+}
+
+.website_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 40px;
+  padding: 10px;
+  border-top: 1px solid var(--grey);
+}
+
+.website_info > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* width: calc(100% / 3); */
+  flex-grow: 1;
+}
+
+.icons_wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.website_info .icon_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  margin: 0 15px;
+}
+
+.website_info .icon_container .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--brand1);
+  border-radius: 50%;
+}
+
+.website_info .icon_container .icon:hover {
+  width: 45px;
+  height: 45px;
+}
+
+.website_info .icon_container .icon img {
+  width: 25px;
 }
