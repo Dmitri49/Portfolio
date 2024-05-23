@@ -1,0 +1,112 @@
+.container {
+    padding: 50px 20px;
+}
+
+.header_container {
+    padding-top: 100px;
+}
+
+.about_info_container {
+    margin: 0;
+}
+
+.header_container .title {
+    display: none;
+}
+
+.subtitle {
+    font-size: 42px;
+}
+
+.container>img {
+    display: none;
+}
+
+.about_subtitle-wrapper {
+    margin: 0 auto 30px auto;
+}
+
+.about_foto>img {
+    width: 350px;
+}
+
+.description {
+    text-align: justify;
+}
+
+.container > p {
+    text-align: center;
+}
+
+.skills_list-wrapper {
+    gap: 50px;
+}
+
+.tabs_title > li {
+    font-size: 18px;
+}
+
+.tab_icon > img {
+    width: 320px;
+}
+
+.tab_content_wrapper {
+    width: 100%;
+    gap: 30px;
+}
+
+.tab_content {
+    padding: 0;
+}
+
+.tab_icon_1::after {
+    top: 30px;
+    left: 14px;
+    width: 292px;
+    height: 190px;
+}
+
+.tab_icon_2::after {
+    top: 30px;
+    left: 14px;
+    width: 292px;
+    height: 190px;
+}
+
+.tab_icon_3::after {
+    top: 30px;
+    left: 14px;
+    width: 292px;
+    height: 190px;
+}
+
+.tab_icon_4::after {
+    top: 30px;
+    left: 14px;
+    width: 292px;
+    height: 190px;
+}
+
+.tab_icon_5::after {
+    top: 30px;
+    left: 14px;
+    width: 292px;
+    height: 190px;
+}
+
+
+
+
+
+
+.form_wrapper {
+    width: 90%;
+}
+
+.contact_title {
+    margin: 20px 0 35px 0;
+}
+
+.input_container .input_box {
+    width: 100%;
+}

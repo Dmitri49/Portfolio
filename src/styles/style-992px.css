@@ -1,0 +1,36 @@
+
+
+.navbar {
+    padding: 0 40px;
+}
+
+.navbar_container {
+    gap: 25px;
+}
+
+.person_info_container {
+    flex: 0 1 100%;
+}
+
+.person_tools_wrapper {
+    flex: 0 1 100%;
+}
+
+
+.skills_list-wrapper {
+    flex-wrap: wrap;
+    gap: 80px;
+}
+
+.list_technologies-wrapper {
+    flex: 0 1 100%;
+}
+
+.list_additional-wrapper {
+    flex: 0 1 100%;
+}
+
+.tab_content_wrapper {
+    width: 80%;
+    flex-direction: column;
+}

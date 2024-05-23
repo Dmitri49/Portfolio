@@ -5,6 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" media="(max-width: 1280px)" href="./styles/style-1280px.css">
+    <link rel="stylesheet" media="(max-width: 992px)" href="./styles/style-992px.css">
+    <link rel="stylesheet" media="(max-width: 576px)" href="./styles/style-576px.css">
     <link rel="stylesheet" href="./styles/components/animate.css">
     <title>My portfolio</title>
 </head>
@@ -34,6 +37,11 @@
                             <label class="tgl-btn" for="checkbox">
                         </div>
                     </div>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
 
                 </div>
             </nav>
@@ -41,33 +49,35 @@
             <div class="header_container container">
                 <h1 class="title">Developer</h1>
                 <div class="header_info_container">
-                    <div class="person_card_container">
-                        <div class="card_container-foto"></div>
-                        <p class="card_name">Dmitri</p>
-                        <p class="card_jobtitle">Web developer</p>
-                        <div class="person_card-info">
-                            <div class="card_item">
-                                <img src="./icons/card_info/icon_email.svg" class="card_item-icon" alt="">
-                                <span class="card_item-description">dmitrilissin@gmail.com</span>
+                    <div class="person_card_wrapper">
+                        <div class="person_card_container">
+                            <div class="card_container-foto"></div>
+                            <p class="card_name">Dmitri</p>
+                            <p class="card_jobtitle">Web developer</p>
+                            <div class="person_card-info">
+                                <div class="card_item">
+                                    <img src="./icons/card_info/icon_email.svg" class="card_item-icon" alt="">
+                                    <span class="card_item-description">dmitrilissin@gmail.com</span>
+                                </div>
+                                <div class="card_item">
+                                    <img src="./icons/card_info/icon_country.svg" class="card_item-icon" alt="">
+                                    <span class="card_item-description">Russia</span>
+                                </div>
+                                <div class="card_item">
+                                    <img src="./icons/card_info/icon_work.svg" class="card_item-icon" alt="">
+                                    <span class="card_item-description">Full-time</span>
+                                </div>
+                                <div class="card_item">
+                                    <img src="./icons/card_info/icon_link.svg" class="card_item-icon" alt="">
+                                    <span class="card_item-description">dmitrilissin@gmail.com</span>
+                                </div>
                             </div>
-                            <div class="card_item">
-                                <img src="./icons/card_info/icon_country.svg" class="card_item-icon" alt="">
-                                <span class="card_item-description">Russia</span>
+                            <div class="card_tools">
+                                <span>html</span>
+                                <span>css</span>
+                                <span>js</span>
+                                <span>react</span>
                             </div>
-                            <div class="card_item">
-                                <img src="./icons/card_info/icon_work.svg" class="card_item-icon" alt="">
-                                <span class="card_item-description">Full-time</span>
-                            </div>
-                            <div class="card_item">
-                                <img src="./icons/card_info/icon_link.svg" class="card_item-icon" alt="">
-                                <span class="card_item-description">dmitrilissin@gmail.com</span>
-                            </div>
-                        </div>
-                        <div class="card_tools">
-                            <span>html</span>
-                            <span>css</span>
-                            <span>js</span>
-                            <span>react</span>
                         </div>
                     </div>
                     <div class="person_info_container">
@@ -88,18 +98,20 @@
                             </div>
                         </div>
                     </div>
-                    <div class="person_tools_container">
-                        <div class="person-tools-item">
-                            <span class="tools-item-number">4</span>
-                            <p class="tools-item-description">Programming Language</p>
-                        </div>
-                        <div class="person-tools-item">
-                            <span class="tools-item-number">5</span>
-                            <p class="tools-item-description">Development Tolls</p>
-                        </div>
-                        <div class="person-tools-item">
-                            <span class="tools-item-number">1</span>
-                            <p class="tools-item-description">Year of Experience</p>
+                    <div class="person_tools_wrapper">
+                        <div class="person_tools_container">
+                            <div class="person-tools-item">
+                                <span class="tools-item-number">4</span>
+                                <p class="tools-item-description">Programming Language</p>
+                            </div>
+                            <div class="person-tools-item">
+                                <span class="tools-item-number">5</span>
+                                <p class="tools-item-description">Development Tolls</p>
+                            </div>
+                            <div class="person-tools-item">
+                                <span class="tools-item-number">1</span>
+                                <p class="tools-item-description">Year of Experience</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -107,7 +119,7 @@
         </header>
 
         <main>
-            <section class="about-section">
+            <section class="about_section" id="about_section">
                 <div class="about_container container">
                     <img src="./icons/mouse_icon.svg" class="element-animation" alt="">
                     <img src="./icons/mouse_line_icon.svg" class="element-animation" alt="">
@@ -121,12 +133,9 @@
                                 <p class="description">Hello!</p>
                                 <p class="description">My name is Sinan and I specialize in web developement that
                                     utilizes HTML, CSS, JS, and REACT etc.</p>
-                                <p class="description">I am a highly motivated individual and eternal optimist dedicated
-                                    to writing clear, concise, robust code that works. Striving to never stop learning
-                                    and improving.</p>
-                                <p class="description">When I'm not coding, I am writing bolgs, reading, or picking up
-                                    some new hands-on art project like photography.</p>
-                                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                                <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, at.</p>
+                                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio culpa excepturi nemo provident qui enim ipsa reprehenderit recusandae?</p>
+                                <p class="description">Lorem ipsum dolor consectetur adipisicing elit. Quis
                                     praesentium amet distinctio.</p>
                                 <img src="./icons/p_close.svg" alt="">
                             </div>
@@ -139,7 +148,7 @@
             </section>
 
 
-            <section class="skills-section">
+            <section class="skills_section" id="skills_section">
                 <div class="skills_container container">
                     <img src="./icons/mouse_icon.svg" class="element-animation" alt="">
                     <img src="./icons/mouse_line_icon.svg" class="element-animation" alt="">
@@ -191,7 +200,7 @@
             </section>
 
 
-            <section class="works_section">
+            <section class="works_section" id="works_section">
                 <div class="works_container container">
                     <img src="./icons/mouse_icon.svg" class="element-animation" alt="">
                     <img src="./icons/mouse_line_icon.svg" class="element-animation" alt="">
@@ -221,8 +230,10 @@
                                         <a href="https://dmitri49.github.io/Project--tech_tracker/src/index.html"
                                             target="_blank">View App</a>
                                     </div>
-                                    <div class="tab_icon tab_icon_1">
-                                        <img src="./icons/laptop_icon.svg" alt="">
+                                    <div class="tab_icon_wrapper">
+                                        <div class="tab_icon tab_icon_1">
+                                            <img src="./icons/laptop_icon.svg" alt="">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -237,12 +248,12 @@
                                         <a href="https://github.com/Dmitri49/Project--terminal_mini_games"
                                             target="_blank">View App</a>
                                     </div>
-                                    <div class="tab_icon tab_icon_2">
-                                        <img src="./icons/laptop_icon.svg" alt="">
+                                    <div class="tab_icon_wrapper">
+                                        <div class="tab_icon tab_icon_2">
+                                            <img src="./icons/laptop_icon.svg" alt="">
+                                        </div>
                                     </div>
                                 </div>
-
-
                             </div>
 
                             <div class="tab_content">
@@ -255,8 +266,10 @@
                                         </p>
                                         <a href="#" target="_blank">View Website</a>
                                     </div>
-                                    <div class="tab_icon tab_icon_3">
-                                        <img src="./icons/laptop_icon.svg" alt="">
+                                    <div class="tab_icon_wrapper">
+                                        <div class="tab_icon tab_icon_3">
+                                            <img src="./icons/laptop_icon.svg" alt="">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -270,8 +283,10 @@
                                             Accusamus, suscipit obcaecati?.</p>
                                         <a href="#" target="_blank">View Website</a>
                                     </div>
-                                    <div class="tab_icon tab_icon_4">
-                                        <img src="./icons/laptop_icon.svg" alt="">
+                                    <div class="tab_icon_wrapper">
+                                        <div class="tab_icon tab_icon_4">
+                                            <img src="./icons/laptop_icon.svg" alt="">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -286,8 +301,10 @@
                                         <a href="https://dmitri49.github.io/layout-designer-project-58/src/index.html"
                                             target="_blank">View Website</a>
                                     </div>
-                                    <div class="tab_icon tab_icon_5">
-                                        <img src="./icons/laptop_icon.svg" alt="">
+                                    <div class="tab_icon_wrapper">
+                                        <div class="tab_icon tab_icon_5">
+                                            <img src="./icons/laptop_icon.svg" alt="">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -296,7 +313,7 @@
                 </div>
             </section>
 
-            <footer class="contact_section">
+            <footer class="contact_section" id="contact_section">
                 <div class="contact_container container">
                     <img src="./icons/mouse_icon.svg" class="element-animation" alt="">
                     <img src="./icons/mouse_line_icon.svg" class="element-animation" alt="">

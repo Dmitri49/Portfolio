@@ -1,0 +1,33 @@
+.navbar {
+    padding: 0 90px;
+}
+
+.container {
+    padding: 90px 60px;
+}
+
+.header_info_container {
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.person_card_wrapper {
+    flex: 0 1 100%;
+}
+
+.person_info_container {
+    flex: 0 1 65%;
+}
+
+.person_tools_wrapper {
+    flex: 0 1 20%;
+}
+
+.about_info_container {
+    flex-wrap: wrap;
+    gap: 80px;
+}
+
+.tab_content_wrapper {
+    width: 90%;
+}

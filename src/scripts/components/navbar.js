@@ -14,16 +14,28 @@ window.addEventListener("scroll", () => {
   },
 );
 
-// ================= CHECKBOX ====================== //
+// ================= LIGHT THEMA ====================== //
 
 const checkbox = document.querySelector('#checkbox');
 const wrapper = document.querySelector('#wrapper');
+const aboutSection = document.querySelector('#about_section');
+const skillsSection = document.querySelector('#skills_section');
+const worksSection = document.querySelector('#works_section');
+const contactSection = document.querySelector('#contact_section')
 
 checkbox.addEventListener('change', function(e) {
     if (e.target.checked) {
-        wrapper.classList.add('light')
+        wrapper.classList.add('light');
+        aboutSection.classList.add('light');
+        skillsSection.classList.add('light');
+        worksSection.classList.add('light');
+        contactSection.classList.add('light');
     } else {
-        wrapper.classList.remove('light')
+        wrapper.classList.remove('light');
+        aboutSection.classList.remove('light');
+        skillsSection.classList.remove('light');
+        worksSection.classList.remove('light');
+        contactSection.classList.remove('light');
     }
 
 })
