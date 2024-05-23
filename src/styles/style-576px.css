@@ -34,6 +34,10 @@
     text-align: justify;
 }
 
+.subtitle_h3 {
+    font-size: 26px;
+}
+
 .container > p {
     text-align: center;
 }
@@ -42,12 +46,24 @@
     gap: 50px;
 }
 
+.tabs_container {
+    padding: 10px 20px 20px 20px;
+}
+
+.tabs_title {
+    height: 30px;
+}
+
 .tabs_title > li {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .tab_icon > img {
     width: 320px;
+}
+
+.tab_description > a {
+    font-size: 24px;
 }
 
 .tab_content_wrapper {
