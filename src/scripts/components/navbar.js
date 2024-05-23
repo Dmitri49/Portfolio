@@ -1,3 +1,19 @@
+// ================= HUMBURGER ======================== //
+
+const hamburger = document.querySelector('.hamburger');
+const navItems = document.querySelector('.nav-items');
+const navLinks = document.querySelectorAll('.nav-link');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  navItems.classList.toggle('active');
+});
+
+navLinks.forEach(link => link.addEventListener('click', () => {
+  hamburger.classList.remove('active');
+  navItems.classList.remove('active');
+}));
+
 // ============== NAVBARS VISIBLE ================== //
 
 const navbar = document.querySelector("#navbar");
@@ -7,6 +23,8 @@ let lastScrollTop = 0;
 window.addEventListener("scroll", () => {
     if (scrollY > lastScrollTop) {
       navbar.classList.remove("visible");
+      hamburger.classList.remove('active');
+    navItems.classList.remove('active');
     } else if (scrollY < lastScrollTop) {
       navbar.classList.add("visible");
     }
@@ -39,3 +57,4 @@ checkbox.addEventListener('change', function(e) {
     }
 
 })
+
