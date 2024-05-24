@@ -388,6 +388,14 @@ body {
   margin-bottom: 20px;
 }
 
+.card_item>a {
+  color: white;
+}
+
+.card_item>a:hover {
+  color: var(--brand1);
+}
+
 .card_tools {
   display: flex;
   justify-content: space-around;
@@ -468,7 +476,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  width: 215px;
+  width: 245px;
   height: 380px;
   margin: 0 auto;
   border-radius: 67px;
